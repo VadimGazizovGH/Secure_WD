@@ -45,7 +45,6 @@ const server = http.createServer((rq, rs) => {
 		let users;
 		try {
 		users = fs.readFileSync('./users.txt', 'utf8');
-		console.log(users);
 		}
 		catch (err) {
 			rs.writeHead(500);
