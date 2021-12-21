@@ -54,7 +54,6 @@ const server = http.createServer((rq, rs) => {
 
         // разделяем файл с паролями на строки через символ переноса
 		let account_lines = users.split(/\n/);
-		console.log(account_lines);
 		let is_user_exists = false;
 		let password_to_check = undefined;
 
