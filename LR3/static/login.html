@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+	<style>
+		body>main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: calc(100vh - 7rem);
+			padding: 1rem 0;
+		}
+
+		article {
+			padding: 0;
+			overflow: hidden;
+		}
+
+		article div {
+			padding: 1rem;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<nav class="container-fluid">
+		<ul>
+			<li><a href="./" class="contrast" onclick="event.preventDefault()"><strong>SQL Injection 101</strong></a>
+			</li>
+		</ul>
+		
+			<ul>
+			  <li><a href="#" class="contrast" data-theme-switcher="light">Light</a></li>
+			  <li><a href="#" class="contrast" data-theme-switcher="dark">Dark</a></li>
+			</ul>
+		  </nav>
+
+		<!-- Main -->
+		<main class="container">
+			<article class="grid">
+				<div>
+					<hgroup>
+						<h1>Войти</h1>
+						<h2>Введите имя и пароль</h2>
+					</hgroup>
+					<form action="/signin" method="POST">
+						<label for="name">Имя:</label><br />
+						<input type="text" id="name" name="name"></input><br />
+						<label for="pass">Пароль</label><br />
+						<input type="password" id="pass" name="pass" /><br />
+						<input type="submit" value="Войти" />
+					</form>
+				</div>
+				<div></div>
+			</article>
+		</main><!-- ./ Main -->
+
+<script src="https://picocss.com/examples/js/minimal-theme-switcher.js"></script>
+</body>
+</html>
