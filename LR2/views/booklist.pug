@@ -1,0 +1,23 @@
+html
+    head
+        link(rel="stylesheet",href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css")
+        title Книги в библиотеке
+    body
+        h1 Список книг
+        form(action='/books', method='GET')
+            p
+            | Фильтр по названию: 
+            input(type='text', name='name', value='')
+            input(type='submit', value='Применить')
+        table(style='width:100%', border='1', role="grid")
+            thead
+                tr
+                th Id
+                th Автор
+                th Книга
+            tbody
+            each book in data
+                tr
+                    td #{book.id}
+                    td #{book.author}
+                    td #{book.book}
